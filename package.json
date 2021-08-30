@@ -75,8 +75,7 @@
   },
   "scripts": {
     "start": "gulp --maps --max-old-space-size=8192",
-    "build": "gulp build",
-    "prettier": "prettier --write \"./src/**/*.{scss,ts,tsx,js,jsx,json}\""
+    "build": "gulp build"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -113,7 +112,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "bootstrap": "^5.0.1",
-    "vanilla-lazyload": "^17.1.0"
+    "bootstrap": "^5.0.1"
   }
 }
