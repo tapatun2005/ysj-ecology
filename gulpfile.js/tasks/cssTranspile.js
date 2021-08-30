@@ -9,7 +9,7 @@ function cssTranspile() {
   const purgecss = require("gulp-purgecss");
   const purgewhitelist = require("../../src/scss/whitelist.json");
   const sass = require("gulp-sass");
-  const sourcemaps = require("gulp-sourcemaps");
+  // const sourcemaps = require("gulp-sourcemaps");
 
   const postcssplugins = [autoprefixer()];
 
@@ -23,7 +23,7 @@ function cssTranspile() {
 
   return gulp
     .src(paths.css.src + "!(_)*.scss")
-    .pipe(gulpif(flags.maps, sourcemaps.init()))
+    // .pipe(gulpif(flags.maps, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss(postcssplugins))
     .pipe(
@@ -40,7 +40,7 @@ function cssTranspile() {
         })
       )
     )
-    .pipe(gulpif(flags.maps, sourcemaps.write("maps")))
+    // .pipe(gulpif(flags.maps, sourcemaps.write("maps")))
     .pipe(gulp.dest(flags.proxy ? paths.css.proxyDest : paths.css.staticDest));
 }
 
