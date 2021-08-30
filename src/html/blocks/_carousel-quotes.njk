@@ -1,0 +1,30 @@
+<section class="carousel-quotes{% if carouselQuotesClass %} {{carouselQuotesClass}}{% endif %}">
+    <div class="container">
+            
+            {% set tag = 'What our clients say' %}
+            {% include "_macros/blocks/_section-content.njk" %}
+            <div class="carousel-quotes__wrapper">
+                <div class="carousel-quotes__list">
+                    {% for item in range (0,10) %}
+                        <div class="carousel-quotes__item">
+                            <div class="carousel-quotes__content">
+                                <div class="carousel-quotes__logo">
+                                    <picture class="image-lazy">
+                                        <source 
+                                            media="(min-width: 320px)"
+                                            data-srcset="/assets/images/placeholder-client-logo.png"
+                                        >
+                                        <img src="/assets/images/placeholder-client-logo.png" alt="">
+                                    </picture>
+                                </div>
+                                <h3>“Jaywing brings a wealth of IFRS 9 experience and combines excellent modelling credentials with extensive industry knowledge. Their development of high-quality ECL models within tight timescales means that we are well placed to achieve IFRS 9 compliance within our project timescales.”
+                                </h3>
+                            </div>
+                            <div class="carousel-quotes__author">Josh Smith</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+    </div>
+</section>

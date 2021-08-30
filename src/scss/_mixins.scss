@@ -1,0 +1,6 @@
+@mixin transition($duration: 0.2s, $property: (opacity, visibility), $delay: 0s) {
+    transition-duration: $duration;
+    transition-property: $property;
+    transition-delay: $delay;
+    transition-timing-function: ease-in-out;
+  }

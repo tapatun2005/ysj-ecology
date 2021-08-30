@@ -1,0 +1,39 @@
+{% set page = 'product' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+    
+    {% set heroClass = 'bg--black border-bottom' %}
+    {% set heroTag = 'Specialisms' %}
+    {% set heroTitle = 'IFRS 9' %}
+    {% set heroText = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.' %}
+    {% set heroAdditionalLink = true %}
+    {% include "blocks/_hero.njk" %}
+
+
+    {% set textClass = 'bg--black border-bottom' %}
+    {% include "blocks/_text.njk" %}
+
+    {% set textClass = 'bg--white border-bottom' %}
+    {% set textList = true %}
+    {% include "blocks/_text.njk" %}
+
+    {% set textClass = 'bg--white border-bottom' %}
+    {% set textList = false %}
+    {% include "blocks/_text.njk" %}
+
+    {% set carouselQuotesClass = 'bg--black' %}
+    {% include "blocks/_carousel-quotes.njk" %}
+
+    {% set imageTextClass = 'bg--white' %}
+    {% set imageTextTitle = 'Some text here' %}
+    {% set imageTextContent = '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur voluptatum libero ad reprehenderit animi porro aut nobis eaque modi! Dicta saepe iure asperiores velit veritatis debitis voluptate quos! Architecto, ab.</p>' %}
+    {% include "blocks/_image-text.njk" %}
+
+    {% set caseStudiesClass = 'bg--white border-bottom' %}
+    {% include "blocks/_case-studies-short.njk" %}
+
+    {% set newsletterClass = 'bg--white' %}
+    {% include "blocks/_newsletter.njk" %}
+
+{% endblock main %}

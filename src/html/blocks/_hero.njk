@@ -1,0 +1,56 @@
+<section class="hero{% if heroClass %} {{heroClass}}{% endif %}">
+
+    <div class="hero__background">
+        <picture class="image-lazy hero__picture">
+            <source
+                media="(min-width: 320px)"
+                data-srcset="/assets/images/placeholder-02.jpeg"
+            >
+            <img src="/assets/images/placeholder-02.jpeg" alt="">
+        </picture>
+    </div>
+
+    <div class="container --lg">
+        <div class="hero__content">
+            {% if heroTag %}
+                <div class="tag hero__tag">{{ heroTag }}</div>
+            {% endif %}
+            {% if heroSubtitle %}
+                <h1 class="hero__title">{% if heroTitle %}<span class="js-split-word">{{ heroTitle }}</span>{% endif %}<span class="js-split-word">{{ heroSubtitle }}</span></h1>
+            {% else %}
+                <h1 class="hero__title js-split-word">{% if heroTitle %}{{ heroTitle }}{% endif %}</h1>
+            {% endif %}
+            <div class="hero__desc">
+                <p>{% if heroText %}{{heroText | safe}}{% endif %}</p>
+                {% if heroCTA %}
+                <div class="hero__ctas">
+                    <a href="/pages" class="btn --primary">
+                        <span>Find out more</span>
+                    </a>
+                    {% if heroAdditionalLink %}
+                        <a href="/pages" class="btn --primary">
+                            <span>Find out more</span>
+                        </a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero__scroll">
+            <div class="__wrapper">
+                {% for item in range(0,2) %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40.816" height="56.569" viewBox="0 0 40.816 56.569">
+                        <g transform="translate(-93.068 -1127.5)">
+                        <line y2="55.862" transform="translate(113.477 1127.5)"/>
+                        <path d="M-7196.744,660.231l20.055,20.055,20.055-20.055" transform="translate(7290.166 503.077)"/>
+                        </g>
+                    </svg>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</section>

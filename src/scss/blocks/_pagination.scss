@@ -1,0 +1,26 @@
+.pagination {
+  li {
+    margin-right: 3rem;
+    font-size: 1.25em;
+
+    &.--is-disabled {
+      a {
+        color: $gray-on-dark;
+      }
+    }
+
+    &.--is-active,
+    a:hover {
+      color: $gray-on-dark;
+    }
+
+    &.--is-active {
+      border-bottom: 2px solid $yellow;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{% set page = 'specialisms' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+    
+    {% set heroClass = 'bg--black border-bottom' %}
+    {% set heroTag = 'Specialisms' %}
+    {% set heroTitle = 'THE RIGHT SPECIALISTS, RIGHT NOW' %}
+    {% set heroText = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.' %}
+    {% include "blocks/_hero.njk" %}
+
+    {% set productsClass = 'bg--black' %}
+    {% include "blocks/_products.njk" %}
+
+    {% set productsClass = 'bg--white border-bottom' %}
+    {% include "blocks/_products-latest.njk" %}
+
+    {% set newsletterClass = 'bg--white' %}
+    {% include "blocks/_newsletter.njk" %}
+
+{% endblock main %}

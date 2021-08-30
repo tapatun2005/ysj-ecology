@@ -1,0 +1,25 @@
+.border {
+    &--bottom {
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 1px;
+            background-color: rgba($white, .2);
+            z-index: 1;
+            transform: scale(0, 1);
+            @include transition(1s, transform, .5s);
+            transform-origin: left center;
+        }
+    }
+}
+
+.is-loaded  {
+    &.border--bottom {
+        &:after {
+            transform: scale(1, 1);
+        }
+    }
+}

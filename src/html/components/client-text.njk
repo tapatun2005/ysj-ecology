@@ -1,0 +1,13 @@
+{% set page = 'work' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+    {% set clientTextClass = 'bg--black' %}
+    {% set clientTextBg = '#e9e9e9' %}
+    {% include "blocks/_client-text.njk" %}
+
+    {% set clientTextClass = 'bg--white' %}
+    {% set clientTextBg = '#000' %}
+    {% include "blocks/_client-text.njk" %}
+    
+{% endblock main %}

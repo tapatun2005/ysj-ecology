@@ -1,0 +1,72 @@
+{# Import Head Macros #}
+{%- from "_macros/head/_open-graph.njk" import OpenGraph -%}
+{%- from "_macros/head/_seo.njk" import Seo -%}
+{%- from "_macros/head/_twitter-card.njk" import TwitterCard -%}
+{# Import Body Macros #}
+{%- from "_macros/blocks/_accordion.njk" import Accordion -%}
+{%- from "_macros/blocks/_card-deck.njk" import CardDeck -%}
+{%- from "_macros/blocks/_cookie-consent.njk" import CookieConsent -%}
+{%- from "_macros/blocks/_footer.njk" import Footer -%}
+{%- from "_macros/blocks/_hero.njk" import Hero -%}
+{%- from "_macros/blocks/_navbar.njk" import Navbar -%}
+{%- from "_macros/blocks/_skip-nav.njk" import SkipNav -%}
+{%- from "_macros/blocks/_spread.njk" import Spread -%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{ Seo({
+      "seoUrl": page.pageUrl,
+      "seoTitle": page.pageTitle,
+      "seoDescription": page.pageDescription
+    }) }}
+
+    {{ OpenGraph({
+      "ogTitle": page.pageTitle,
+      "ogDescription": page.pageDescription,
+      "ogUrl": page.pageUrl,
+      "ogImageSrc": page.pageSocialImage,
+      "ogImageWidth": "1200",
+      "ogImageHeight": "630"
+    }) }}
+
+    {{ TwitterCard({
+      "twitterCard": "summary",
+      "twitterSite": "@username",
+      "twitterTitle": page.pageTitle,
+      "twitterDescription": page.pageDescription,
+      "twitterImage": page.pageSocialImage,
+      "twitterImageAlt": page.pageSocialImageAlt
+    }) }}
+
+    {% block styles %}
+      <link rel="stylesheet" type="text/css" href="/assets/css/main.css?cbt=1">
+      <link rel="stylesheet" type="text/css" href="/assets/css/{{ page }}.css">
+    {% endblock %}
+  </head>
+
+  <body class="d-flex flex-column" id="top" style="min-height:100%">
+
+    {% block cookieConsent %}
+      {% include "_macros/blocks/_cookie-consent.njk" %}
+    {% endblock %}
+
+    {% block header %}
+       {% include "blocks/_menu.njk" %}
+    {% endblock %}
+
+    <main id="content">
+      {% block main %}{% endblock %}
+    </main>
+
+    {% include "blocks/_loader.njk" %}
+
+    {% block scripts %}
+      <script src="/assets/scripts/{{ page }}.js"></script>
+    {% endblock %}
+
+  </body>
+</html>

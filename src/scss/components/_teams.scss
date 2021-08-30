@@ -1,0 +1,43 @@
+.teams__grid {
+    margin: 100px 0 60px;
+    @media (min-width: 769px) {
+        display: flex;
+        transform: translate(100px);
+    }
+
+    &__col {
+        margin-bottom: 50px;
+        @media (min-width: 769px) {
+            flex: 1 0 0;
+            margin-bottom: 0;
+            margin-right: 100px;
+        }
+
+        &.--small {
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 769px) {
+                max-width: 40%;
+            }
+            
+            .image {
+                width: 60%;
+                margin-bottom: 50px;
+                &:last-child {
+                    margin-bottom: 0;
+                    align-self: flex-end;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.teams__cta {
+    display: flex;
+    justify-content: center;
+}

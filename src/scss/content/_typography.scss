@@ -1,0 +1,127 @@
+h1,
+.h1 {
+  text-transform: uppercase;
+  font-size: 6.5rem;
+  line-height: 1em;
+  font-family: 'Oswald', sans-serif;
+  &.--sm {
+    font-size: 5.5rem;
+  }
+  &.--lg {
+    font-size: 7.5em;
+  }
+}
+
+h2,
+.h2 {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5em;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+.content {
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid $yellow;
+
+    &:hover {
+      border-bottom-color: $yellow-100;
+    }
+  }
+}
+
+p {
+  line-height: 1.75em;
+  margin-bottom: 3rem;
+
+  &.--md {
+    font-size: 1.125rem;
+  }
+  &.--lg {
+    font-size: 1.375em;
+  }
+
+  &.--xlg {
+    font-size: 1.55em;
+  }
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  line-height: 1.1em;
+}
+
+.btn {
+  font-size: 1.125rem;
+  line-height: 1.1em;
+}
+
+.--is-light {
+  color: $black;
+
+  .label {
+    color: $gray-on-light;
+  }
+}
+
+.--is-dark {
+  color: $white;
+
+  .label {
+    color: $gray-on-dark;
+  }
+}
+
+.--gray {
+  &-light {
+    color: $gray-500;
+  }
+
+  &-mid {
+    color: $gray-600;
+  }
+
+  &-dark {
+    color: $gray-700;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  h1,
+  .h1 {
+    font-size: 2.25rem;
+    &.--lg {
+      font-size: 2.25rem;
+    }
+  }
+
+  .label {
+    font-size: 1em;
+  }
+}
+
+
+i {
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  &.--green {
+    background: $green;
+    padding: 0 10px;
+    color: $white;
+  }
+}
+
+a {
+  color: $green;
+  &:hover {
+    color: darken($green, 10);
+  }
+}

@@ -1,0 +1,83 @@
+{% macro Footer(socialMediaLinks) %}
+<section class="footer" id="footer">
+
+    <div class="container footer__container">
+      
+      <div class="footer__cols">
+        <div class="footer__col">
+          <div class="footer__cta">
+            <span class="_title js-split-word">Want to work with us?</span>
+            <a href="#" class="link--arrow">
+              <span class="link--underlined">Get in touch</span>
+              <svg fill="#ffffff" height="10.9" width="29">
+                <path d="M24.6 10.9l-1.1-.9 3-3.8H0V4.7h26.5l-3-3.8 1.1-.9L29 5.5z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__menu">
+            
+            <div class="footer__menu--col">
+              <div class="footer__menu--title">Part of Jaywing</div>
+              <ul>
+                <li><a href="#" title="">Item</a></li>
+                <li><a href="#" title="">Item</a></li>
+                <li><a href="#" title="">Item</a></li>
+                <li><a href="#" title="">Item</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__menu--col">
+              <div class="footer__menu--title">Part of Jaywing</div>
+              <ul>
+                <li><a href="#" title="">Item</a></li>
+                <li><a href="#" title="">Item</a></li>
+                <li><a href="#" title="">Item</a></li>
+                <li><a href="#" title="">Item</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      
+      <div class="footer__bottom-links">
+        <a href="#" title="">Accessibility</a>
+        <a href="#" title="">Privacy Policy</a>
+      </div>
+
+      <div class="footer__copyright">
+        <p>© 2021 Jaywing. Jaywing plc is registered in England and Wales. Albert Works, 71 Sidney Street, Sheffield S1 4RG. Company number 05935923.</p>
+      </div>
+    </div>
+
+</section>
+
+{% endmacro %}
+
+{{ Footer(
+  [
+    {
+      "platform": "Instagram",
+      "faClass": "fa-instagram",
+      "href": "https://www.instagram.com/"
+    },
+    {
+      "platform": "Facebook",
+      "faClass": "fa-facebook-f",
+      "href": "https://www.facebook.com/"
+    },
+    {
+      "platform": "Twitter",
+      "faClass": "fa-twitter",
+      "href": "https://twitter.com/"
+    }
+  ]
+) }}

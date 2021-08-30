@@ -1,0 +1,14 @@
+{% set page = 'homepage' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+
+    {% set tag = true %}
+    {% set heroClass = 'bg--black' %}
+    {% include "blocks/_hero.njk" %}
+
+    {% set tag = true %}
+    {% set heroClass = 'bg--white' %}
+    {% include "blocks/_hero.njk" %}
+
+{% endblock main %}

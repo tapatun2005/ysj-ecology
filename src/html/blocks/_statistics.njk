@@ -1,0 +1,16 @@
+<section class="stats{% if statsClass %} {{statsClass}}{% endif %}">
+    <div class="container">        
+        {% set tag = "Our story" %}
+        {% include "_macros/blocks/_section-content.njk" %}
+
+        <div class="stats__wrapper">
+            {% for item in range(0,3) %}
+                <div class="stat">
+                    <h4 class="_title js-split-word">650+ employees</h4>
+                    <p>Employees as part of a wider community, specialising in areas such as digital marketing, customer service and outsourcing, e-commerce and brand communications</p>
+                </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</section>

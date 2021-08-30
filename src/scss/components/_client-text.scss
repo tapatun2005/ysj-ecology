@@ -1,0 +1,106 @@
+.client-text {
+    padding: 0;
+
+    @media (min-width: 769px) {
+        display: flex;
+        min-height: 50vh;
+    }
+
+    &__col {
+        position: relative;
+        padding: 100px 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (min-width: 769px) {
+            width: 50vw;
+            padding: 100px;
+        }
+
+        &:first-child {
+            @media (max-width: 768px) {
+                width: 100vw;
+                height: 100vh;
+                max-height: 300px;
+            }
+        }
+
+        &.--link {
+            text-decoration: none;
+            color: $white;
+            position: relative;
+            @include transition(.5s, color);
+            
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: $yellow;
+                @include transition(.5s, transform);
+                transform: scale(1, 0);
+                transform-origin: center bottom;
+            }
+
+            .bg--white & {
+                color: $black;
+            }
+
+            &:hover {
+                color: $black;
+                svg {
+                    fill: $black;
+                }
+                &:before {
+                    transform: scale(1,1);
+                }
+            }
+        }
+
+        &.--picture {
+            @media (min-width: 769px) {
+                width: 60vw;
+            }
+        }
+        
+    }
+
+    &__picture {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: auto;
+        }
+    }
+
+    &__content {
+        max-width: 450px;
+        opacity: 0;
+        transform: translate(0, 20px);
+        @include transition(1s, (transform, opacity), .5s);
+
+        @media (max-width: 768px) {
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        svg {
+            @include transition(.5s, fill);
+            .bg--white & {
+                fill: $black;
+            }
+        }
+
+        .is-loaded & {
+            opacity: 1;
+            transform: translate(0)
+        }
+    }
+}

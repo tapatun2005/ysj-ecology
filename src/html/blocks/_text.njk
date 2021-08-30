@@ -1,0 +1,26 @@
+<section class="text{% if textClass %} {{textClass}}{% endif %}">
+    <div class="container">
+            
+            {% set tag = 'Summary' %}
+            {% set title = 'Some title' %}
+            {% include "_macros/blocks/_section-content.njk" %}
+
+            {% set tag = null %}  
+            {% set title = null %}
+            
+            {% if textList %}
+                <ul class="text__list">
+                    {% for item in range(0,4) %}
+                        <li>
+                            <h4>Expect credit</h4>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% set content = '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aperiam cupiditate doloremque minus eum reiciendis nisi illo odit consequatur voluptate ex, accusamus perferendis dignissimos distinctio nobis error quos voluptatem! Ratione?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aperiam cupiditate doloremque minus eum reiciendis nisi illo odit consequatur voluptate ex, accusamus perferendis dignissimos distinctio nobis error quos voluptatem! Ratione?</p>' %}
+            {% set ctas = true %}
+            {% include "_macros/blocks/_section-content.njk" %}
+
+    </div>
+</section>

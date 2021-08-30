@@ -1,0 +1,32 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  // padding-top: 58px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    display: block;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 56px;
+  }
+}
+
+.--is-light {
+  background-color: $white;
+}
+
+.--is-dark {
+  background-color: $black;
+}
+
+main {
+  display: block;
+  overflow-x: hidden;
+}

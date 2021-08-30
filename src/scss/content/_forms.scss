@@ -1,0 +1,28 @@
+form {
+  .form-control {
+    border-radius: 0;
+    border: 2px solid $gray-mid;
+    font-size: 2.688em;
+
+    &::placeholder {
+      color: $gray-400;
+    }
+  }
+  .input-group {
+    .btn {
+      padding: 0;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  form {
+    .form-control {
+      border-radius: 0;
+      border: 2px solid $gray-mid;
+      font-size: 1.25em;
+    }
+  }
+}

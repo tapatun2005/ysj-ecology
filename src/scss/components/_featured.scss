@@ -1,0 +1,103 @@
+.featured {
+    background: $black;
+    padding: 100px 0;
+    color: $white;
+
+    &__cols {
+        @media (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        @media (min-width: 992px) {
+            max-width: 50vw;
+        }
+
+       
+    }
+
+    &__li {
+        padding: 50px 0;
+        border-bottom: 1px solid rgba($white, .2);
+        opacity: 0;
+        transform: translate(-20px);
+        @include transition(.75s, (opacity, transform));
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .is-loaded & {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $white;
+        font-size: 1.5em;
+    }
+
+    picture {
+        margin-left: 30px;
+        max-width: 200px;
+        filter: grayscale(1);
+        opacity: .25;
+        @include transition(.25s, (filter, opacity));
+        @media (max-width: 480px) {
+            order: 0;
+            margin: 20px 0;
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 481px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        div {
+            flex: 1 0 0;
+            @include transition(.35s, (transform));
+
+            @media (max-width: 480px) {
+                order: 1;
+            }
+        }
+
+        svg {
+            @include transition(.25s, (transform, fill));
+        }
+
+        &:hover {
+
+            div {
+                transform: translate(10px);
+            }
+            picture {
+                filter: grayscale(0);
+                opacity: 1;
+            }
+            svg {
+                transform: translate(10px);
+                fill: $yellow;
+            }
+        }
+    }
+}

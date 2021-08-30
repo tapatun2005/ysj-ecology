@@ -1,0 +1,10 @@
+{% set page = 'homepage' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+    {% set teamClass = 'bg--black' %}
+    {% include "blocks/_team.njk" %}
+
+    {% set teamClass = 'bg--white' %}
+    {% include "blocks/_team.njk" %}
+{% endblock main %}

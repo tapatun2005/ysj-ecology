@@ -1,0 +1,23 @@
+
+    {% if tag %}
+        <div class="tag">{{ tag }}</div>
+    {% endif %}
+    {% if title %}
+        <h2 class="js-split-word">{{ title }}</h2>
+    {% endif %}
+
+    {% if content %}
+        <div class="section__content">{{ content | safe }}</div>
+    {% endif %}
+
+    {% if ctas %}
+        <div class="section__ctas">
+            <a href="" class="btn --primary" title="">
+                <span>Find out more</span>
+            </a>
+            <a href="" class="btn --primary" title="">
+                <span>Find out more</span>
+            </a>
+        </div>
+    {% endif %}
+

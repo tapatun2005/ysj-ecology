@@ -1,0 +1,42 @@
+{% set page = 'homepage' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+
+
+    {% set heroClass = 'bg--black' %}
+    {% set heroTitle = 'YSJ STUDENTS and' %}
+    {% set heroSubtitle = 'ECOLOGICAL JUSTICE' %}
+    {% set heroText = 'Students are graduating into a world of climate tipping points and great uncertainty, in which environmental, social and economic challenges are deeply intertwined. The concept of <i class="--green">ecological justice</i> conveys how climate and ecological degradation deepen other forms of inequality, affecting the most vulnerable first and worst.' %}
+    {% include "blocks/_hero.njk" %}
+
+    {% set imageTextClass = 'bg--black' %}
+    {% set imageTextContent = '<p>In students’ lives as citizens and professionals, they will need to both adapt to these overlapping crises, and to contribute to a just transition to a more sustainable society. Indeed York St John University’s 2026 strategy states that it will shape capacity to rise to pressing environmental challenges.</p><p>Cross-university collaborative research was needed to establish students’ perspectives on ecological justice, so as to inform pedagogical responses across multiple subject areas, which might enable students to develop a sense of agency and active hope.</p>' %}
+    {% include "blocks/_image-text.njk" %}
+
+    {% set simpleTextClass = 'bg--black' %}
+    {% set simpleTextContent = '<p class="-xlg">This website shares the project’s <a href="#" title="Findings">findings</a>, <a href="#" title="Findings">outputs</a> and <a href="#" title="Findings">recommendations</a>. A guided reflection exercise is also included for university staff teams at any university to reflect on their own pedagogy and relationship to ecological justice. </p>' %}
+    {% include "blocks/_simple-text.njk" %}
+
+    {% set videoClass = 'bg--black' %}
+    {% include "blocks/_video.njk" %}
+
+
+
+
+    {% set teamClass = 'bg--black' %}
+    {% include "blocks/_team.njk" %}
+
+    {% set imageTextClass = 'bg--black' %}
+    {% set imageTextTitle = 'Some text here' %}
+    {% set imageTextLink = 'Link' %}
+    {% set imageTextContent = '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur voluptatum libero ad reprehenderit animi porro aut nobis eaque modi! Dicta saepe iure asperiores velit veritatis debitis voluptate quos! Architecto, ab.</p>' %}
+    {% include "blocks/_image-text.njk" %}
+
+    {% set carouselClass = 'bg--white' %}
+    {% include "blocks/_carousel.njk" %}
+
+    {% set carouselClass = 'bg--white' %}
+    {% include "blocks/_newsletter.njk" %}
+
+{% endblock main %}

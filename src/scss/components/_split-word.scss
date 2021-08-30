@@ -1,0 +1,23 @@
+.js-split-word {
+    opacity: 0;
+
+    .is-loaded & {
+        opacity: 1;
+    }
+
+    & > div {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    span {
+        display: inline-block;
+        opacity: 0;
+        transform: translate(0, 10px);
+        @include transition(1s, (opacity, transform), .25s);
+        &.is-active {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+}

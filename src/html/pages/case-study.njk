@@ -1,0 +1,15 @@
+{% set page = 'casestudy' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+
+    {% set caseStudyClass = 'bg--white border-bottom' %}
+    {% include "blocks/_case-study.njk" %}
+
+    {% set caseStudiesClass = 'bg--white' %}
+    {% include "blocks/_case-studies-short.njk" %}
+
+    {% set newsletterClass = 'bg--white' %}
+    {% include "blocks/_newsletter.njk" %}
+
+{% endblock main %}

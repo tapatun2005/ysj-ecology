@@ -1,0 +1,13 @@
+.tag { 
+    font-size: 1.25rem;
+    opacity: .45;
+    margin: 0 0 30px;
+    opacity: 0;
+    transform: translate(-50px);
+    @include transition(.75s, (opacity, transform), .25s);
+
+    .is-loaded & {
+        opacity: .5;
+        transform: translate(0);
+    }
+}

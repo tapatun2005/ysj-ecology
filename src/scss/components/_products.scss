@@ -1,0 +1,118 @@
+.products {
+    &__wrapper {
+        margin: 100px 0;
+        opacity: 0;
+        transform: translate(0, 100px);
+        @include transition(1s, (opacity, transform));
+
+        .is-loaded & {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    &__list {
+        justify-content: space-between;
+        margin-left: -15px;
+        width: calc(100% + 30px);
+        display: flex;
+        flex-wrap: wrap;
+
+        &.--latest {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+.product {
+    width: 100%;
+    color: $white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid $yellow;
+    padding: 30px 15px;
+    position: relative;
+    @include transition(.5s, color);
+    @media (min-width: 992px) {
+        width: 28%;
+    }
+
+    ._title {
+        position: relative;
+    }
+
+    .--latest & {
+        padding: 0 15px 0 30px;
+        border-left: 1px solid $yellow;
+        border-bottom: none;
+        margin-bottom: 30px;
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .post ul {
+        margin: 30px 0;
+        & > li {
+            margin-bottom: 10px;
+        }
+    }
+
+    li {
+        &:before {   
+            @include transition(.5s, background);
+        }
+    }
+
+    svg {
+        @include transition(.5s, (fill, transform));
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $yellow;
+        transform: scale(1, 0);
+        transform-origin: bottom center;
+        @include transition(.5s, transform);
+    }
+
+    .bg--white & {
+        color: $black;
+
+        svg {
+            fill: $black;
+        }
+    }
+
+    &:hover {
+        color: $black;
+        &:before {
+            transform: scale(1);
+        }
+        svg {
+            transform: translate(10px);
+            fill: $black;
+        }
+        
+        li {
+            &:before {
+                background: $black;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        max-width: 25%;
+        margin: 0 30px 30px 0;
+    }
+}

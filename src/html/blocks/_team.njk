@@ -1,0 +1,68 @@
+<section class="team{% if teamClass %} {{teamClass}}{% endif %}">
+    <div class="container">
+            
+            {% set tag = 'Teams' %}
+            {% set title = 'Meet our specialist RISK consultants. Delivering best-in-class analytics to drive profitability and achieve regulatory compliance.' %}
+            {% include "_macros/blocks/_section-content.njk" %}
+
+            <div class="teams__grid">
+                <div class="teams__grid__col --small">
+                    
+                    <div class="image team__image">
+                        <div class="image__overlay">
+                            <picture class="image-lazy team__picture">
+                                <source 
+                                    media="(min-width: 320px)"
+                                    data-srcset="/assets/images/placeholder-01.png"
+                                >
+                                <img src="/assets/images/placeholder-01.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="image__caption">
+                            Meet <a href="#" title="" class="link--underlined">Allan</a>
+                        </div>
+                    </div>
+
+                    <div class="image team__image">
+                        <div class="image__overlay">
+                            <picture class="image-lazy team__picture">
+                                <source 
+                                    media="(min-width: 320px)"
+                                    data-srcset="/assets/images/placeholder-01.png"
+                                >
+                                <img src="/assets/images/placeholder-01.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="image__caption">
+                           Meet <a href="#" title="" class="link--underlined">Allan</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="teams__grid__col">
+                    <div class="image team__image">
+                        <div class="image__overlay">
+                            <picture class="image-lazy team__picture">
+                                <source 
+                                    media="(min-width: 320px)"
+                                    data-srcset="/assets/images/placeholder-01.png"
+                                >
+                                <img src="/assets/images/placeholder-01.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="image__caption">
+                            Meet <a href="#" title="" class="link--underlined">Allan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teams__cta">
+                <a href="" class="btn --primary" title="">
+                    <span>Meet all team</span>                        
+                </a>
+            </div>
+
+    </div>
+</section>

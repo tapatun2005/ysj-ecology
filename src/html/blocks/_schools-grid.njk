@@ -1,0 +1,51 @@
+<section class="title-text{% if titleTextClass %} {{titleTextClass}}{% endif %}">
+    <div class="container --lg">
+
+        {% if titleTextTitleAbove %}
+            <div class="title-text__title-above">
+                <h2 class="js-split-word">{{ titleTextTitleAbove }}</h2>
+            </div>
+        {% endif %}
+
+        <div class="title-text__wrapper">
+            <div class="title-text__col">
+                {% if titleTextTitle %}
+                    <h2 class="js-split-word">{{ titleTextTitle }}</h2>
+                {% endif %}
+            </div>
+
+            <div class="title-text__col">
+                <div class="title-text__content">
+
+                    {% if titleTextContent %}
+                        <div class="post">
+                            {{ titleTextContent | safe }}
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="schools__wrapper">
+            <a href="#" class="school">
+                <h3>ARTS</h3>
+                <p>The desire among students for extra-curricular events and opportunities at YSJ to support their efforts to contribute to ecological justice both now and in their future careers.</p>
+            </a>
+            <a href="#" class="school">
+                <h3>BUSINESS</h3>
+                <p>Students’ desire to understand systemic and structural approaches to address interlinked global challenges rather than individual behaviour change, which they justifiably regard as having limited potential.</p>
+            </a>
+            <a href="#" class="school">
+                <h3>EDUCATION, LANGUAGES AND PSYCHOLOGY </h3>
+                <p>The need for students and staff to consider proactively how their programmes might integrate issues of ecological justice in a way that is natural to the subject area.</p>
+            </a>
+            <a href="#" class="school">
+                <h3>HUMANITIES</h3>
+                <p>The disjuncture between students’ learning and campus environmental practice, and the lack of opportunities for students on many programmes to learn actively through engagement with campus systems.</p>
+            </a>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,30 @@
+<section class="title-text{% if titleTextClass %} {{titleTextClass}}{% endif %}">
+    <div class="container --lg">
+
+        {% if titleTextTitleAbove %}
+            <div class="title-text__title-above">
+                <h2 class="js-split-word">{{ titleTextTitleAbove }}</h2>
+            </div>
+        {% endif %}
+
+        <div class="title-text__wrapper">
+            <div class="title-text__col">
+                {% if titleTextTitle %}
+                    <h2 class="js-split-word">{{ titleTextTitle }}</h2>
+                {% endif %}
+            </div>
+
+            <div class="title-text__col">
+                <div class="title-text__content">
+
+                    {% if titleTextContent %}
+                        <div class="post">
+                            {{ titleTextContent | safe }}
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

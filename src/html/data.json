@@ -1,0 +1,77 @@
+{
+  "media": {
+    "sm": "(min-width: 576px)",
+    "md": "(min-width: 768px)",
+    "lg": "(min-width: 992px)",
+    "xl": "(min-width: 1200px)"
+  },
+
+  "socialMediaLinks": [
+    {
+      "platform": "Instagram",
+      "faClass": "fa-instagram",
+      "href": "https://www.instagram.com/"
+    },
+    {
+      "platform": "Facebook",
+      "faClass": "fa-facebook-f",
+      "href": "https://www.facebook.com/"
+    },
+    {
+      "platform": "Twitter",
+      "faClass": "fa-twitter",
+      "href": "https://twitter.com/"
+    }
+  ],
+
+  "navbar": {
+    "menuItems": [
+      {
+        "label": "Styleguide",
+        "href": "/styleguide.html"
+      },
+      {
+        "label": "Components",
+        "href": "/components.html"
+      },
+      {
+        "label": "Pages",
+        "href": "#",
+        "children": [
+          {
+            "label": "Homepage",
+            "href": "/homepage.html"
+          },
+          {
+            "label": "Page 1",
+            "href": "/x.html"
+          },
+          {
+            "label": "Page 1",
+            "href": "/x.html"
+          },
+          {
+            "label": "Page 1",
+            "href": "/x.html"
+          },
+          {
+            "label": "Page 1",
+            "href": "/x.html"
+          },
+          {
+            "label": "Page 1",
+            "href": "/x.html"
+          }
+        ]
+      }
+    ]
+  },
+
+  "homePage": {
+    "pageUrl": "https://",
+    "pageTitle": "Home",
+    "pageDescription": "This is the homepage",
+    "pageSocialImage": "https://picsum.photos/id/770/1200/630",
+    "pageSocialImageAlt": "Social Image"
+  }
+}

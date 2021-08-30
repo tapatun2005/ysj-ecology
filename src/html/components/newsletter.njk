@@ -1,0 +1,11 @@
+{% set page = 'homepage' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+    {% set newsletterClass = 'bg--black' %}
+    {% include "blocks/_newsletter.njk" %}
+
+    {% set newsletterClass = 'bg--white' %}
+    {% include "blocks/_newsletter.njk" %}
+    
+{% endblock main %}

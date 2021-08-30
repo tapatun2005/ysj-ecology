@@ -1,0 +1,234 @@
+.case-studies {
+
+    &__wrapper,
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: flex-end;
+        align-items: center;
+        opacity: 0;
+        transform: translate(0, 100px);
+        @include transition(1s, (opacity, transform));
+
+        .is-loaded & {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    &__rows {
+        width: 100%;
+    }
+
+    &__wrapper {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        overflow: hidden;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: $white;
+        }
+
+        .bg--black & {
+            &:after {
+                background: $black;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        width: 100%;
+        transform: translate(0);
+        order: 0;
+        position: relative;
+
+        &--col {
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+            @media (min-width: 481px) {
+                min-width: calc(100%/2);
+            }
+    
+            @media (min-width: 992px) {
+                min-width: calc(100%/3);
+            }
+        }
+
+        &:last-child {
+            & > * {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__item {
+        min-width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        text-decoration: none;
+        position: relative;
+        border-right: 1px solid $yellow;
+        border-bottom: 1px solid $yellow;
+
+        @media (min-width: 481px) {
+            min-width: calc(100%/2);
+        }
+
+        @media (min-width: 992px) {
+            min-width: calc(100%/3);
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: translate(-50%);
+            left: 50%;
+            bottom: 0;
+        }
+
+        &:after {
+            height: 1px;
+        }
+        
+        &:before {
+            left: 50%;
+            height: 100%;
+            background-color: $yellow;
+            transform: translate(-50%) scale(1, 0);
+            @include transition(.5s, transform);
+            transform-origin: bottom center;
+        }
+        
+        .bg--white & {
+            color: $black;
+        }
+
+        svg {
+            fill: $black;
+        }
+
+        &:hover {
+            color: $black;
+
+            &:before {
+                transform: translate(-50%) scale(1, 1);
+            }
+        }
+
+        &.is-active {
+            .case-studies__content {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__content {
+        padding: 60px 15px;
+        position: relative;
+        opacity: 0;
+        transform: scale(0.9);
+        @include transition(.5s, (color, opacity, transform));
+
+        h3 {
+            font-size: 1.75rem;
+        }
+        picture {
+            margin-bottom: 50px;
+        }
+
+        img {
+            width: auto;
+            height: 50px;
+            filter: grayscale(1);
+        }
+    }
+
+    &__rows__bullets {
+        display: flex;
+        order: 1;
+        margin-top: 30px;
+        & > * {
+            counter-increment: caseBullet;
+            margin: 3px;
+            position: relative;
+            cursor: pointer;
+            &:after {
+                content: counter(caseBullet);
+                padding: 10px;
+                @include transition(.25s, background);
+            }
+
+            &:hover {
+                &:after {
+                    background-color: $yellow;
+                }
+            }
+            &.is-active {
+                &:after {
+                    background-color: $yellow;
+                }
+            }
+        }
+    }
+
+    &__rows__navs {
+        order: 2;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 5px;
+        & > * {
+            width: 45px;
+            height: 45px;
+            background: $black;
+            margin-left: 5px;
+            cursor: pointer;
+            @include transition(.1s, transform);
+            position: relative;
+
+            svg {
+                fill: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:first-child {
+                svg {
+                    transform: rotate(180deg) translate(50%, 50%);
+                }
+            }
+            &:active {
+                transform: scale(.9);
+            }
+
+            &:hover {
+                svg {
+                    fill: $yellow;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        flex-grow: 1;
+    }
+}

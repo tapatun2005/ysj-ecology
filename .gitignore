@@ -1,0 +1,23 @@
+node_modules
+yarn-error.log
+
+## Typescript report files
+report.*.json
+
+## Static build folder
+_static
+static
+
+_dist
+dist
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history

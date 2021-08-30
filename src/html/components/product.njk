@@ -1,0 +1,12 @@
+{% set page = 'specialisms' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+
+    {% set productsClass = 'bg--black' %}
+    {% include "blocks/_products.njk" %}
+
+    {% set productsClass = 'bg--white' %}
+    {% include "blocks/_products.njk" %}
+
+{% endblock main %}

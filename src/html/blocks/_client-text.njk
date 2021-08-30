@@ -1,0 +1,23 @@
+<section class="client-text{% if clientTextClass %} {{clientTextClass}}{% endif %}">
+    <div class="client-text__col --picture" {% if clientTextBg %}style="background: {{clientTextBg}};"{% endif %}>
+            <picture class="image-lazy client-text__picture">
+                <source 
+                    media="(min-width: 320px)"
+                    data-srcset="/assets/images/placeholder-client-logo.png"
+                >
+                <img src="/assets/images/placeholder-client-logo.png" alt="">
+            </picture>
+        </div>
+    </div>
+
+    <a href="#" class="client-text__col --link">
+        <div class="client-text__content">
+            <div class="tag">Cliet name</div>
+            <h2 class="h2 title--arrow">
+                <span class="js-split-word">Some text here</span>
+                <svg fill="#ffffff" height="10.9" width="29"><path d="M24.6 10.9l-1.1-.9 3-3.8H0V4.7h26.5l-3-3.8 1.1-.9L29 5.5z"></path></svg>
+            </h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur voluptatum libero ad reprehenderit animi porro aut nobis eaque modi! Dicta saepe iure asperiores velit veritatis debitis voluptate quos! Architecto, ab.</p>
+        </div>
+    </a>
+</section>

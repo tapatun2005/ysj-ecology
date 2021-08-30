@@ -1,0 +1,28 @@
+.bg {
+    &--black {
+        background: $black;
+        color: $white;
+
+        & + & {
+            padding: 0;
+        }
+    }
+    &--white {
+        background: $white;
+        color: $black;
+
+        & + & {
+            padding: 0;
+        }
+    }
+    &--green {
+        background: darken($green, 10);
+        color: $white;
+
+        & + & {
+            padding: 0;
+        }
+    }
+
+
+}

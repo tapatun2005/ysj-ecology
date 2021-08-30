@@ -1,0 +1,63 @@
+picture {
+    display: block;
+    
+    img {
+        @include transition(.75s, (filter, opacity));
+        width: 100%;
+    }
+}
+
+.image-lazy {
+    img {
+        opacity: .5;
+        filter: blur(10px);
+    }
+}
+
+.image {
+    &__overlay {
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $black;
+            @include transition(1.5s, (transform));
+
+            .bg--white & {
+                background-color: $white;
+            }
+        }
+
+        img {
+            transform: translate(50%) scale(1.5);
+            @include transition(1.5s, (transform))
+        }
+    }
+
+    &__caption {
+        margin: 10px 0;
+        opacity: 0;
+        font-size: 0.8rem;
+        transform: translate(-30px);
+        @include transition(1s, (transform, opacity), .75s);
+    }
+    
+    &.is-active {
+        img {
+            transform: translate(0);
+        }
+        .image__overlay:after {
+            transform: translate(100%);
+        }
+
+        .image__caption {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.schools {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+
+}
+
+.school {
+  width: calc(50% - 1rem);
+  background: $green;
+  color: $black;
+  padding: 40px 60px;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  @include transition(.2s, transform);
+  @media(max-width: 991px) {
+    width: 100%;
+  }
+
+  &:hover {
+    color: $black;
+    transform: scale(.95);
+  }
+}
+

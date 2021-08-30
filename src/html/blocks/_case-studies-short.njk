@@ -1,0 +1,39 @@
+<section class="case-studies{% if caseStudiesClass %} {{caseStudiesClass}}{% endif %}">
+    <div class="container">
+            
+            {% set tag = 'Case studies' %}
+            {% set title = 'Title' %}
+            {% set content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aperiam cupiditate doloremque minus eum reiciendis nisi illo odit consequatur voluptate ex, accusamus perferendis dignissimos distinctio nobis error quos voluptatem! Ratione?' %}
+
+
+            {% include "_macros/blocks/_section-content.njk" %}
+            <div class="case-studies__wrapper">
+                <div class="case-studies__list">
+                    {% for item in range (0,3) %}    
+                        <a href="#" title="" class="case-studies__item">
+                            <div class="case-studies__content">
+                                <picture class="image-lazy">
+                                    <source 
+                                        media="(min-width: 320px)"
+                                        data-srcset="/assets/images/placeholder-client-logo.png"
+                                    >
+                                    <img src="/assets/images/placeholder-client-logo.png" alt="">
+                                </picture>
+                                <h3 class="title-arrow">
+                                    <span>Title here</span>
+                                    <svg fill="#ffffff" height="10.9" width="29">
+                                        <path d="M24.6 10.9l-1.1-.9 3-3.8H0V4.7h26.5l-3-3.8 1.1-.9L29 5.5z"></path>
+                                    </svg>
+                                </h3>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="case-studies__cta">
+                    <a href="" class="btn --primary">
+                        <span>More case studies</span>
+                    </a>
+                </div>
+            </div>
+    </div>
+</section>

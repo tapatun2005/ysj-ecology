@@ -1,0 +1,119 @@
+{
+  "name": "frontend-boilerplate",
+  "description": "",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Jaywing/frontend-boilerplate.git"
+  },
+  "keywords": [
+    "gulp 4",
+    "nunjucks",
+    "webpack",
+    "typescript",
+    "react"
+  ],
+  "author": "joe.diton@jaywing.com",
+  "license": "ISC",
+  "homepage": "https://github.com/Jaywing/frontend-boilerplate",
+  "main": "gulpfile.js",
+  "paths": {
+    "staticDir": "./dist/",
+    "proxyAddress": "https://",
+
+    "css": {
+      "src": "./src/scss/**/",
+      "staticDest": "./dist/assets/css/",
+      "proxyDest": "../Jaywing.Risk.Umbraco/assets/css/"
+    },
+    "fonts": {
+      "src": [
+        "./src/fonts/**/*.+(ttf|otf|woff|woff2|eot|svg)"
+      ],
+      "staticDest": "./dist/assets/fonts/",
+      "proxyDest": "../Jaywing.Risk.Umbraco/assets/fonts/"
+    },
+    "html": {
+      "staticSrc": "./src/html/**/",
+      "staticData": "src/html/data.json",
+      "staticDest": "./dist/",
+      "proxyWatch": "../Jaywing.Risk.Umbraco/**/*.cshtml",
+      "proxyDest": "../Jaywing.Risk.Umbraco/assets/html/"
+    },
+    "images": {
+      "src": "./src/images/**/*.+(png|jpg|jpeg|gif|svg)",
+      "staticDest": "./dist/assets/images/",
+      "proxyDest": "../Jaywing.Risk.Umbraco/assets/images/"
+    },
+    "video": {
+      "src": "./src/video/**/*.+(mp4)",
+      "staticDest": "./dist/assets/video/",
+      "proxyDest": "../Jaywing.Risk.Umbraco/assets/video/"
+    },
+    "js": {
+      "src": "./src/ts/**/",
+      "webpackEntry": {
+        "main": "./src/ts/main.ts"
+      },
+      "webpackOutput": {
+        "path": "dist/assets",
+        "publicPath": "/assets/"
+      },
+      "staticDest": "./dist/assets/",
+      "proxyDest": "../Jaywing.Risk.Umbraco/assets/"
+    }
+  },
+  "prettier": {
+    "tabWidth": 2
+  },
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
+  "browserSync": {
+    "open": false
+  },
+  "scripts": {
+    "start": "gulp --maps --max-old-space-size=8192",
+    "build": "gulp build",
+    "prettier": "prettier --write \"./src/**/*.{scss,ts,tsx,js,jsx,json}\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-imports": "^2.0.0",
+    "browser-sync": "^2.26.10",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nunjucks": "^5.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^2.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-util": "^3.0.8",
+    "prettier": "^2.0.2",
+    "purgecss": "^2.3.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-twbs-bootstrap": "^2.0.3",
+    "stylelint-prettier": "^1.1.2",
+    "ts-loader": "^8.0.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^3.9.7",
+    "webpack": "^4.46.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "vanilla-lazyload": "^17.1.0"
+  }
+}

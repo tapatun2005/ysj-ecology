@@ -1,0 +1,29 @@
+{% set page = 'about' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+    
+    {% set heroClass = 'bg--black border-bottom' %}
+    {% set heroTag = 'About' %}
+    {% set heroTitle = 'Who we are' %}
+    {% set heroText = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.' %}
+    {% include "blocks/_hero.njk" %}
+
+    {% set statsClass = 'bg--black' %}
+    {% include "blocks/_statistics.njk" %}
+
+    {% set imageTextClass = 'bg--black --content' %}
+    {% set imageTextTitleAbove = 'Title above' %}
+    {% set imageTextContent = '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur voluptatum libero ad reprehenderit animi porro aut nobis eaque modi! Dicta saepe iure asperiores velit veritatis debitis voluptate quos! Architecto, ab.</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur voluptatum libero ad reprehenderit animi porro aut nobis eaque modi! Dicta saepe iure asperiores velit veritatis debitis voluptate quos! Architecto, ab.</p>' %}
+    {% include "blocks/_image-text.njk" %}
+
+    {% set caseStudiesClass = 'bg--white border-bottom' %}
+    {% include "blocks/_case-studies.njk" %}
+
+    {% set carouselClass = 'bg--white' %}
+    {% include "blocks/_carousel.njk" %}
+
+    {% set newsletterClass = 'bg--white' %}
+    {% include "blocks/_newsletter.njk" %}
+
+{% endblock main %}

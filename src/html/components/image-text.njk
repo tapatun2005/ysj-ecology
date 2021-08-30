@@ -1,0 +1,11 @@
+{% set page = 'homepage' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+    {% set imageTextClass = 'bg--black' %}
+    {% include "blocks/_image-text.njk" %}
+
+    {% set imageTextClass = 'bg--white' %}
+    {% include "blocks/_image-text.njk" %}
+    
+{% endblock main %}

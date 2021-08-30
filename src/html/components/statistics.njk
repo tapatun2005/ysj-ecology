@@ -1,0 +1,12 @@
+{% set page = 'about' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+
+    {% set statsClass = 'bg--black' %}
+    {% include "blocks/_statistics.njk" %}
+
+    {% set statsClass = 'bg--white' %}
+    {% include "blocks/_statistics.njk" %}
+
+{% endblock main %}

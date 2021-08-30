@@ -1,0 +1,28 @@
+<section class="products{% if productsClass %} {{productsClass}}{% endif %}">
+    <div class="container">
+        {% set title = "Our specialists work in agile, collaborative teams, with the right blend of consultants, analysts, modellers and technical developers to meet your exacting needs. We work with you or for you, at your place or ours, and our approaches are tried and tested." %}
+        {% include "_macros/blocks/_section-content.njk" %}
+
+        <div class="products__wrapper">
+            <div class="tag">Our products</div>
+            <div class="products__list">
+                {% for item in range(0,6) %}
+                    <a href="" class="product">
+                        <h4 class="_title title--arrow">
+                            <span class="js-split-word">Some text here</span>
+                            <svg fill="#ffffff" height="10.9" width="29"><path d="M24.6 10.9l-1.1-.9 3-3.8H0V4.7h26.5l-3-3.8 1.1-.9L29 5.5z"></path></svg>
+                        </h4>
+                        <div class="post">
+                            <p>Employees as part of a wider community, specialising in areas such as digital marketing, customer service and outsourcing, e-commerce and brand communications</p>
+                            <ul>
+                                <li>Item</li>
+                                <li>Item</li>
+                            </ul>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        
+    </div>
+</section>

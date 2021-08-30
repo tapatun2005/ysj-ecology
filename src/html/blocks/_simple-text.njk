@@ -1,0 +1,39 @@
+<section class="simple-text{% if simpleTextClass %} {{simpleTextClass}}{% endif %}">
+
+    {% if imageTextTitleAbove %}
+        <div class="container simple-text__title-above">
+            {% set title = "Jaywing plc is an AIM listed company operating in the UK, France and Australia." %}
+            {% include "_macros/blocks/_section-content.njk" %}
+        </div>
+    {% endif %}
+
+    <div class="simple-text__wrapper">
+
+        {% if simpleTextImage %}
+            <div class="simple-text__col">
+                <div class="image">
+                    <div class="image__overlay">
+                        <picture class="image-lazy image-text__picture">
+                            <source
+                                media="(min-width: 320px)"
+                                data-srcset="/assets/images/placeholder-01.png"
+                            >
+                            <img src="/assets/images/placeholder-01.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="simple-text__col">
+            <div class="simple-text__content">
+
+                {% if simpleTextContent %}
+                    <div class="post">
+                        {{ simpleTextContent | safe }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

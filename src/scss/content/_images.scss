@@ -1,0 +1,7 @@
+img {
+  @extend .img-fluid;
+
+  &.--grayscale {
+    filter: grayscale(100%);
+  }
+}

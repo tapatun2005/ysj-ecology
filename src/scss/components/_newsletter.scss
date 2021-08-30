@@ -1,0 +1,88 @@
+.newsletter {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__title {
+        font-size: 5.5rem;
+        line-height: 1em;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+            font-size: 10vw;
+        }
+        ._line {
+            text-align: right;
+            &:first-child {
+                margin-right: 60px;
+            }
+        }
+    }
+
+    &__form {
+        margin: 30px 0;
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        opacity: 0;
+        transform: translate(0, 10px);
+        @include transition(1s, (opacity, transform));
+
+        .is-loaded & {
+            opacity: 1;
+            transform: translate(0);
+        }
+
+        input[type="email"] {
+            width: 100%; 
+            padding: 10px 20px;
+            border: 1px solid rgba($black, .1);
+            outline-color: $yellow;
+
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 0;
+            border: none;
+            background: none;
+            padding: 10px 20px;
+
+            svg {
+                @include transition(.2s, transform);
+            }
+
+            &:hover {
+                svg {
+                    transform: translate(10px);
+                }
+            }
+        }
+
+        .bg--black & {
+            input[type='email'] {
+                background: none;
+                border-color: rgba($white, .25);
+            }
+
+            button {
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    &__quote {
+        max-width: 450px;
+        opacity: 0;
+        transform: translate(0, 10px);
+        @include transition(1s, (opacity, transform));
+        .is-loaded & {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+}

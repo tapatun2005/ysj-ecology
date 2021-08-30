@@ -1,0 +1,50 @@
+<section class="image-text{% if imageTextClass %} {{imageTextClass}}{% endif %}">
+
+    {% if imageTextTitleAbove %}
+        <div class="container image-text__title-above">
+            {% set title = "Jaywing plc is an AIM listed company operating in the UK, France and Australia." %}
+            {% include "_macros/blocks/_section-content.njk" %}
+        </div>
+    {% endif %}
+
+    <div class="image-text__wrapper">
+        <div class="image-text__col">
+            <div class="image">
+                <div class="image__overlay">
+                    <picture class="image-lazy image-text__picture">
+                        <source
+                            media="(min-width: 320px)"
+                            data-srcset="/assets/images/placeholder-04.jpeg"
+                        >
+                        <img src="/assets/images/placeholder-04.jpeg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-text__col">
+            <div class="image-text__content">
+
+                {% if imageTextTitle %}
+                    <h2 class="js-split-word">{{ imageTextTitle }}</h2>
+                {% endif %}
+
+                {% if imageTextContent %}
+                    <div class="post">
+                        {{ imageTextContent | safe }}
+                    </div>
+                {% endif %}
+
+
+                {% if imageTextLink %}
+                    <a href="" class="link--arrow">
+                        <span class="link--underlined">{{ imageTextLink}}</span>
+                        <svg fill="#ffffff" height="10.9" width="29">
+                            <path d="M24.6 10.9l-1.1-.9 3-3.8H0V4.7h26.5l-3-3.8 1.1-.9L29 5.5z"></path>
+                        </svg>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

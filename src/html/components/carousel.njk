@@ -1,0 +1,12 @@
+{% set page = 'homepage' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+
+    {% set carouselClass = 'bg--white' %}
+    {% include "blocks/_carousel.njk" %}
+    
+    {% set carouselClass = 'bg--black' %}
+    {% include "blocks/_carousel.njk" %}
+
+{% endblock main %}
