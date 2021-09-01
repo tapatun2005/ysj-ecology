@@ -1,0 +1,48 @@
+{% set page = 'api' %}
+{% extends "_layouts/_master.njk" %}
+
+{% block main %}
+
+
+    {% set heroClass = 'bg--black' %}
+    {% set heroTitle = 'YSJ STUDENTS and' %}
+    {% set heroSubtitle = 'ECOLOGICAL JUSTICE' %}
+    {% set heroText = 'Students are graduating into a world of climate tipping points and great uncertainty, in which environmental, social and economic challenges are deeply intertwined. The concept of <i class="--green">ecological justice</i> conveys how climate and ecological degradation deepen other forms of inequality, affecting the most vulnerable first and worst.' %}
+    {% include "blocks/_hero.njk" %}
+
+    {% set imageTextClass = 'bg--black' %}
+    {% set imageTextContent = '<p>In students’ lives as citizens and professionals, they will need to both adapt to these overlapping crises, and to contribute to a just transition to a more sustainable society. Indeed York St John University’s <i class="--green">2026 strategy</i> states that it will shape capacity to rise to pressing environmental challenges.</p><p>Cross-university collaborative research was needed to establish students’ perspectives on ecological justice, so as to inform pedagogical responses across multiple subject areas, which might enable students to develop a sense of agency and active hope.</p>' %}
+    {% include "blocks/_image-text.njk" %}
+
+    {% set simpleTextClass = 'bg--black' %}
+    {% set simpleTextContent = '<p class="-xlg">This website shares the project’s <a href="#" title="Findings">findings</a>, <a href="#" title="Findings">outputs</a> and <a href="#" title="Findings">recommendations</a>. A guided reflection exercise is also included for university staff teams at any university to reflect on their own pedagogy and relationship to ecological justice. </p>' %}
+    {% include "blocks/_simple-text.njk" %}
+
+    {% set videoClass = 'bg--black' %}
+    {% include "blocks/_video.njk" %}
+
+    {% set titleTextClass = 'bg--white' %}
+    {% set titleTextTitle = 'PHASE 1' %}
+    {% set titleTextContent = "<p>Phase 1 of this project was funded by YSJ’s Institute for Social Justice. It involved staff from four Schools conducting seven focus groups with 23 students from all programmes and year groups, facilitated by a YSJ MA student, and a survey involving 331 students, in summer 2020. It explored YSJU students' anxieties, sense of agency and expectations of the university around ecological justice. Phase 1 findings underlined the need to orient the university’s pedagogical approach to ecological justice around integrative concepts of systemic, structural change and alternative possible futures, which prepare students to help reshape and build the resilience of their workplaces and communities. The findings are informing the production of a book chapter and two journal articles, one focusing on student expectations, and the other on student agency. Four key themes identified from preliminary analysis of the focus group data informed the design of Phase 2.</p>" %}
+    {% include "blocks/_title-text.njk" %}
+
+
+    {% set titleTextClass = 'bg--black' %}
+    {% set titleTextTitleAbove = 'THE STAFF-STUDENT COLLABORATIVE PROJECTS' %}
+    {% set titleTextTitle = 'THEMES' %}
+    {% set titleTextContent = "<p>Phase 2 involved four action research projects. Four staff members, one from each of the four participating Schools, each led a team of two student researchers, to explore one of the four themes identified in Phase 1:</p>" %}
+    {% include "blocks/_schools-grid.njk" %}
+
+    {% set simpleTextClass = 'bg--black' %}
+    {% set simpleTextContent = '<p class="-xlg">In addition, a team of two students, Maria Formosa and Elliott Bell, led by filmmaker Chris Healey, created <a href="#">a short film</a> telling the story of the project.</p>' %}
+    {% include "blocks/_simple-text.njk" %}
+
+
+    {% set titleTextClass = 'bg--white' %}
+     {% set titleTextTitleAbove = null %}
+    {% set titleTextTitle = 'METHODS' %}
+    {% set titleTextContent = "<p>PHASE 2 aimed to actively experiment with pedagogies and practices derived directly from our in-depth Phase 1 research. The entire research team of staff and students worked collectively at the outset of the project, with staff providing initial training in relevant research and facilitation skills, and an introduction to the concept of ecological justice. Then, supported by the relevant staff members, each student researcher team set the research agenda around their theme, conducting the research, and organising and evaluating any actions. The students also came together as a larger team to share ideas, as well as coming together with the staff team to guide the direction of the individual projects and the wider project.</p><p>The student co-researchers have gained valuable research, presentation, and teamworking working experience, helping them develop many of the YSJU Graduate Attributes.</p><p>Discover some of our action research project outputs and findings and recommendations as you read on.</p>" %}
+    {% include "blocks/_title-text.njk" %}
+
+
+{% endblock main %}

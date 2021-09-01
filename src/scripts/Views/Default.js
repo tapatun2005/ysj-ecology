@@ -8,7 +8,6 @@ import {
     SectionLoad,
     SplitWords,
     Images,
-    Footer,
     ScrollButton,
     Links,
     Header,
@@ -26,7 +25,6 @@ const Default = () => {
           new SplitWords('.js-split-word')
           new Images('.image')
           new LazyLoad()
-          new Footer()
           new ScrollButton('.hero__scroll')
           new Links('a')
           new Header()
