@@ -10,7 +10,7 @@
   "scss.validate": false,
   "files.associations": {
     "*.html": "njk",
-    "*.njk": "nunjucks",
+    "*.njk": "html",
     "*.cshtml": "razor"
   },
   "emmet.includeLanguages": {

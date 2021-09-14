@@ -15,6 +15,12 @@ video {
   overflow: hidden;
   padding: 0;
 
+  &__container {
+    position: relative;
+    padding: 0;
+    margin-bottom: 200px;
+  }
+
   &__background {
     top: 0;
     left: 0;

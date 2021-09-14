@@ -1,17 +1,19 @@
 <section class="video{% if videoClass %} {{videoClass}}{% endif %}">
+    <div class="container --lg video__container">
+        <div class="video__background">
+            <picture class="image-lazy hero__picture">
+                <source
+                    media="(min-width: 320px)"
+                    data-srcset="/assets/images/homepage-video.jpg"
+                >
+                <img src="/assets/images/homepage-video.jpg" alt="">
+            </picture>
+        </div>
 
-    <div class="video__background">
-        <picture class="image-lazy hero__picture">
-            <source
-                media="(min-width: 320px)"
-                data-srcset="/assets/images/homepage-video.jpg"
-            >
-            <img src="/assets/images/homepage-video.jpg" alt="">
-        </picture>
+        <video controls="true">
+            <source src="/assets/video/homepage-video.mp4" type="video/mp4">
+        </video>
+
     </div>
-
-    <video controls="true">
-        <source src="/assets/video/homepage-video.mp4" type="video/mp4">
-    </video>
 
 </section>
